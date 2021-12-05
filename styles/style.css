@@ -1,4 +1,55 @@
 body {
-  background: purple;
-  background-image: url('mandelbrot-set.png')
+  background-color: white;
+  background-image: url(../images/mandelbrot-set.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.flex-p {
+  display: flex;
+  place-content: center;
+}
+
+/* Navbar */
+nav {
+  justify-content: space-evenly;
+  width: 50%;
+  margin: auto;
+  padding: 0.25em;
+  border: 2px rgba(0, 0, 0, 0.7) solid;
+  border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+nav > div {
+  padding: 0.0625em;
+  margin: 0.25em;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  border: 3px black solid;
+  border-radius: 0.5em;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.home-button {
+  display: flex;
+  place-content: center;
+}
+
+nav > div > a:link {
+  text-decoration: none;
+  color: black;
+}
+nav > div > a:visited {
+  text-decoration: none;
+  color: rgb(110, 110, 110);
+}
+nav > div > a:hover {
+  text-decoration: black underline;
+}
+nav > div > a:active {
+  text-decoration: black dotted;
 }
