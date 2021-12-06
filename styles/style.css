@@ -48,7 +48,13 @@
 /* Doc */
 body {
   background-color: white;
-  background-image: url(../images/mandelbrot-set.png);
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) -50%,
+    rgb(247, 250, 104) 33%,
+    rgb(247, 250, 104) 66%,
+    rgba(0, 0, 0, 0) 150%
+  ), url(../images/mandelbrot-set.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -66,6 +72,9 @@ img {
 /* Navbar */
 nav {
   justify-content: space-evenly;
+  position: sticky;
+  top: -0.6em;
+  z-index: 100;
   width: 50%;
   margin: auto;
   padding: 0.25em;
@@ -113,17 +122,8 @@ nav > div > a:active {
 }
 
 .main {
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0) -50%,
-    rgb(255, 202, 28) 40%,
-    rgb(255, 202, 28) 60%,
-    rgba(0, 0, 0, 0) 150%
-  );
-  backdrop-filter: blur(1px);
-
-  padding: 2em 0;
   margin: 1em 0;
+  margin-bottom: 100em;
   border-radius: 1em;
 
   flex-direction: column;
@@ -136,7 +136,29 @@ nav > div > a:active {
 .heading {
   font-family: Noto;
   font-size: 160%;
-  padding: 0 1em;
+  margin: 1em 1em;
+}
+.heading::before {
+  content: '';
+  background-color: black;
+  position: absolute;
+  left: 50%; right: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 1.35em;
+  text-align: center;
+  width: 7em;
+  height: 2px;
+}
+.heading::after {
+  content: '';
+  background-color: black;
+  position: absolute;
+  left: 50%; right: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 1.25em;
+  text-align: center;
+  width: 7em;
+  height: 2px;
 }
 .main-heading {
   font-size: 185%;
