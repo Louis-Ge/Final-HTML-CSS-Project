@@ -23,23 +23,23 @@
 }
 
 @font-face {
-  font-family: Noto;
+  font-family: 'Noto';
   src: url(../fonts/NotoSerif/NotoSerif-Regular.ttf);
   font-weight: normal;
 }
 @font-face {
-  font-family: Noto;
-  src: url(../fonts/NotoSerif/NotoSerif-Bold.ttf);
+  font-family: 'Noto';
+  src: url('../fonts/NotoSerif/NotoSerif-Bold.ttf');
   font-weight: bold;
 }
 @font-face {
-  font-family: Noto;
+  font-family: 'Noto';
   src: url(../fonts/NotoSerif/NotoSerif-Italic.ttf);
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
-  font-family: Noto;
+  font-family: 'Noto';
   src: url(../fonts/NotoSerif/NotoSerif-BoldItalic.ttf);
   font-weight: bold;
   font-style: italic;
@@ -82,6 +82,7 @@ nav {
   border-radius: 1em;
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(2px);
+  font-family: 'Noto';
 }
 
 nav > div {
@@ -109,10 +110,10 @@ nav > div > a:visited {
   color: rgb(110, 110, 110);
 }
 nav > div > a:hover {
-  text-decoration: black underline;
+  text-decoration: black dotted;
 }
 nav > div > a:active {
-  text-decoration: black dotted;
+  text-decoration: black underline;
 }
 
 /* Classes */
@@ -123,7 +124,6 @@ nav > div > a:active {
 
 .main {
   margin: 1em 0;
-  margin-bottom: 100em;
   border-radius: 1em;
 
   flex-direction: column;
@@ -134,7 +134,7 @@ nav > div > a:active {
 }
 
 .heading {
-  font-family: Noto;
+  font-family: 'Noto';
   font-size: 160%;
   margin: 1em 1em;
 }
@@ -144,7 +144,7 @@ nav > div > a:active {
   position: absolute;
   left: 50%; right: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 1.35em;
+  margin-top: 42px;
   text-align: center;
   width: 7em;
   height: 2px;
@@ -155,11 +155,22 @@ nav > div > a:active {
   position: absolute;
   left: 50%; right: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 1.25em;
+  margin-top: 39px;
   text-align: center;
   width: 7em;
   height: 2px;
 }
 .main-heading {
   font-size: 185%;
+}
+
+.text-content {
+  width: 80%;
+  margin: auto;
+  padding: 3em 1em;
+  text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  .text-content { width: 95%; }
 }
