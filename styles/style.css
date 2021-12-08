@@ -29,7 +29,7 @@
 }
 @font-face {
   font-family: 'Noto';
-  src: url('../fonts/NotoSerif/NotoSerif-Bold.ttf');
+  src: url(../fonts/NotoSerif/NotoSerif-Bold.ttf);
   font-weight: bold;
 }
 @font-face {
@@ -69,6 +69,21 @@ img {
   transform: rotate(-1.5deg);
 }
 
+a:link {
+  text-decoration: overline underline;
+  color: black;
+}
+a:visited {
+  text-decoration: dashed;
+  color: rgb(110, 110, 110);
+}
+a:hover {
+  text-decoration: dotted;
+}
+a:active {
+  text-decoration: black underline;
+}
+
 /* Navbar */
 nav {
   justify-content: space-evenly;
@@ -99,21 +114,6 @@ nav > div {
 .home-button {
   display: flex;
   place-content: center;
-}
-
-nav > div > a:link {
-  text-decoration: none;
-  color: black;
-}
-nav > div > a:visited {
-  text-decoration: none;
-  color: rgb(110, 110, 110);
-}
-nav > div > a:hover {
-  text-decoration: black dotted;
-}
-nav > div > a:active {
-  text-decoration: black underline;
 }
 
 /* Classes */
@@ -165,7 +165,7 @@ nav > div > a:active {
 }
 
 .text-content {
-  width: 80%;
+  width: 70%;
   margin: auto;
   padding: 3em 1em;
   text-align: left;
@@ -173,4 +173,8 @@ nav > div > a:active {
 
 @media only screen and (max-width: 600px) {
   .text-content { width: 95%; }
+}
+
+@media only screen and (min-width: 1200px) {
+  .text-content { width: 40% }
 }
