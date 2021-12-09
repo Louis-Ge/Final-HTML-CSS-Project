@@ -4,42 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="facts.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://kit.fontawesome.com/4b8bf3e425.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <nav class="flex-p">
-      <div>
-          <a href="index.html">
-            <i class="fas fa-home"></i>
-            <p></p>
-          </a>
-        </div>
-        <div>
-          <a href="early-life.html">
-            <p></p>
-          </a>
-        </div>
-        <div>
-          <a href="career.html">
-            <p></p>
-          </a>
-        </div>
-        <div>
-          <a href="achievments.html">
-            <p></p>
-          </a>
-        </div>
-        <div>
-          <a href="facts.html">
-            <p></p>
-          </a>
-        </div>
-        <div>
-          <a href="about.html">
-            <p></p>
-          </a>
-        </div>
-    </nav>
+    <div class="home-button">
+      <a href="index.html">
+        <i class="fas fa-home"></i>
+      </a>
+    </div>
+    <div>
+      <a href="early-life.html">
+        <p>Early Life</p>
+      </a>
+    </div>
+    <div>
+      <a href="career.html">
+        <p>Career</p>
+      </a>
+    </div>
+    <div>
+      <a href="achievments.html">
+        <p>Achievments</p>
+      </a>
+    </div>
+    <div>
+      <a href="facts.html">
+        <p>Facts</p>
+      </a>
+    </div>
+    <div>
+      <a href="about.html">
+        <p>About</p>
+      </a>
+    </div>
+  </nav>
+  <div class="main">
+    <h3 class="heading">Facts</h3>
+    <h4 class="sub-heading" id="mandelbrot-set-section">About the Mandelbrot set</h4>
+    <p class="text-content">The Mandelbrot set is a fractal with infinite detail and complex patterns. It is a graph of z = z^2 + c. z starts at zero and c is any complex number. If a value of c never causes the function to "escape" to infinity, that point is colored black. If a point's value as c ever does escape, its color is assigned from an arbitrary list of colors depending on the number of iterations it takes for that point to escape.</p>
+    <img src="images/mandelbrot-zoom.gif" alt="A GIF of the Mandelbrot set being zoomed in to (on an area where the values of c cause the function to escape)">
+    <p class="text-content">Mandelbrot discovered this ground-breaking fractal when studying another type of fractal, <a href="https://en.wikipedia.org/wiki/Julia_set">Julia sets <i class="fas fa-external-link-alt"></i></a>. These fractals can be defined by many different functions, but we can just use the same function that defines the Mandelbrot set, z = z^2 + c, where we are plotting all values of z for one constant c, instead of all values of c. These sets relate to the Mandelbrot set in a fascinating way. Since a Julia set can be either 1 or infinte pieces, if it is 1 piece, the orgin will be guaranteed to be black (not actually part of the Julia set but instead the "filled" Julia set, because the actual set is just the very edge of the filled area, but that's a lot to think about right now) and if it is infinitely many pieces, the orgin will be neither in the filled area or part of the set. However, when you assemble just the orgin points (or even just the complete graph) of each Julia set in a grid such that the position of the orgin point of the set corresponds to the set's value (c), you will quickly see a, you guessed it, <strong>Mandelbrot set</strong> emerge! How crazy.</p>
+    <img src="images/julia-mandelbrot-relationship.png" alt="A 100x100 grid of Julia sets ">
+  </div>
 </body>
 </html>

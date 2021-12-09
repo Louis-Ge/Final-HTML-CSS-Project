@@ -4,3 +4,11 @@
 -Responsive (media query)
   -Navbar dropdown at smaller screen sizes
 -Mandelbrot zoom (background?)
+
+
+Create an “About” section where you explain a little bit about yourself and include a picture.
+
+Challenge:
+Include audio/video and/or iframe.
+Create a dropdown menu in the navbar.
+Create a single dropdown navbar when the screen is narrow.
